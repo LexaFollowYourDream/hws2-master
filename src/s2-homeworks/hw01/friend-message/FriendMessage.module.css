@@ -1,23 +1,36 @@
-.friendMessage {
-
-}
-
-.friendImageAndText {
-
-}
-
 .friendImageAndText img {
+    height: 48px;
+    width: 48px;
 
 }
 
 .friendText {
+    display:inline-block;
+    position: relative;
+    background-color: #8c8c91;
+    width: 527px;
+    height: 60px;
+    color: #090707;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px 8px 8px 0px;
+    padding-left: 10px;
+    padding-top: 8px;
+    margin-left: 10px;
 
 }
 
 .friendText:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    border-color: transparent #8c8c91 transparent transparent;
+    top: 65%;
+    right: 100%;
 
 }
-
 .friendName {
 
 }

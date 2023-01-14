@@ -2,6 +2,8 @@ import React, {useEffect, useRef, useState} from 'react'
 import { message0 } from '../HW1'
 import s from './MessageSender.module.css'
 
+
+
 // компонента, которая тестирует вашу компоненту (не изменять, any не трогать)
 const MessageSender = (props: any) => {
     const M = props.M
@@ -27,7 +29,7 @@ const MessageSender = (props: any) => {
                 id: messages.length ? messages.length + 1 : 1,
                 user: message0.user,
                 message: {
-                    text,
+                    text:message0.message.text,
                     time: new Date().toTimeString().slice(0, 5),
                 },
             },
@@ -65,8 +67,8 @@ const MessageSender = (props: any) => {
                     onClick={addMessage}
                 >
                     {/*текст кнопки могут изменить студенты*/}
-                    Send
-                    {/**/}
+
+                    {'Send'}
                 </button>
             </div>
         </>
