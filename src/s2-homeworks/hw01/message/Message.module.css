@@ -18,7 +18,6 @@
 .imageAndText img {
     height: 48px;
     width: 48px;
-
 }
 
 
@@ -57,4 +56,9 @@
 .time {
 
 
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    text-align: right;
 }
