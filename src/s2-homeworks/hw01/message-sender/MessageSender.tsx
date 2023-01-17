@@ -13,6 +13,7 @@ const MessageSender = (props: any) => {
 
     const onChange = (e: any) => {
         setText(e.currentTarget.value)
+
     }
 
     useEffect(() => {
@@ -29,7 +30,7 @@ const MessageSender = (props: any) => {
                 id: messages.length ? messages.length + 1 : 1,
                 user: message0.user,
                 message: {
-                    text:message0.message.text,
+                    text:text,
                     time: new Date().toTimeString().slice(0, 5),
                 },
             },
