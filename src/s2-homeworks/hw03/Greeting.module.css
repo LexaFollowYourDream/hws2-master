@@ -2,12 +2,19 @@
 }
 
 .inputAndButtonContainer {
+    display: flex;
+    margin-left: 100px
+;
+}
+.inputClass{
+    height: 30px;
 }
 
 .error {
 }
 
 .input {
+
 }
 
 .input:focus {
@@ -17,6 +24,7 @@
 }
 
 .button {
+    margin-left: 30px;
 }
 
 .button:focus {
@@ -32,4 +40,5 @@
 }
 
 .greeting {
+    margin-bottom: 50px;
 }
