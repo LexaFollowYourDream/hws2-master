@@ -1,4 +1,11 @@
 .greetingForm {
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+
 }
 
 .inputAndButtonContainer {
@@ -7,7 +14,7 @@
 ;
 }
 .inputClass{
-    height: 30px;
+
 }
 
 .error {
@@ -15,6 +22,11 @@
 }
 
 .input {
+    height: 36px;
+    width: 372px;
+    left: 0px;
+    top: 0px;
+    border-radius: 5px;
 
 }
 
@@ -22,22 +34,40 @@
 }
 
 .errorInput {
+
 }
 
 .button {
     margin-left: 30px;
+    height: 36px;
+    width: 78px;
+    left: 454px;
+    top: 1024px;
+    border-radius: 3px;
+    padding: 5px 24px 5px 24px;
+
 }
 
 .button:focus {
+
 }
 
 .button:active {
+    background-color: #0059b3;
+    color: #ddeeff;
 }
 
 .button:disabled {
 }
 
 .text {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+
 }
 
 .greeting {
