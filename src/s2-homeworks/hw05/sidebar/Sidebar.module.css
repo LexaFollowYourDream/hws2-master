@@ -1,16 +1,23 @@
 .sidebar {
+
 }
 
 .sidebar.open {
+    background-color: #cc0000;
+
 }
 
 .background {
 }
 
 .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .nav a {
+
 }
 
 .nav a:hover {
