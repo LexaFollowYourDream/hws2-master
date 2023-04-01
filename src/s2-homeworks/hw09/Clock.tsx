@@ -7,7 +7,7 @@ function Clock() {
     const [timerId, setTimerId] = useState<number | undefined>(undefined)
     const [date, setDate] = useState<Date>(new Date(restoreState('hw9-date', Date.now())))
     const [show, setShow] = useState<boolean>(false)
-    const [stateButtons, setStateButtons] = useState<boolean>(false)
+    const [state, setButtons] = useState<boolean>(false)
 
     const start = () => {
         stop()
@@ -17,13 +17,13 @@ function Clock() {
             setDate(new Date())
         }, 1000)
         setTimerId(id)
-        setStateButtons(!stateButtons)
+        setButtons(!state)
     }
 
 
     const stop = () => {
         clearInterval(timerId)
-        setStateButtons(!stateButtons)
+        setButtons(!state)
     }
 
     const onMouseEnter = () => {
@@ -83,7 +83,7 @@ function Clock() {
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={stateButtons}
+                    disabled={state}
                     onClick={start}
 
                 >
@@ -91,7 +91,7 @@ function Clock() {
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={stateButtons}
+                    disabled={!state}
                     onClick={stop}
                 >
                     stop
