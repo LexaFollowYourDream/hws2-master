@@ -41,15 +41,18 @@ function Clock() {
     const stringDate = (new Date().toLocaleDateString())
 
 
-    let formatterWeekday = new Intl.DateTimeFormat("en", {
+    let dayFormat = new Intl.DateTimeFormat("en", {
         weekday: "long"
     });
-    let formatterMonth = new Intl.DateTimeFormat("en", {
+    let monthFormat = new Intl.DateTimeFormat("en", {
         month: "long",
     });
 
-    const stringDay = formatterWeekday.format(date) || <br/> // пишут студенты
-    const stringMonth = formatterMonth.format(date) || <br/> // пишут студенты
+
+    //const stringDay =  formatterWeekday.format(date)|| <br/> // пишут студенты
+    //const stringMonth = formatterMonth.format(date) || <br/> // пишут студенты
+    const stringDay = `${dayFormat.format(date)}`|| <br/>
+    const stringMonth =`${monthFormat.format(date)}`|| <br/>
 
     return (
         <div className={s.clock}>
