@@ -33,26 +33,23 @@ function Clock() {
         setShow(false)
     }
 
-    const hours = (date.getHours() < 10) ? "0" + date.getHours() : date.getHours()
-    const minutes = (date.getMinutes() < 10) ? "0" + date.getMinutes() : date.getMinutes()
-    const seconds = (date.getSeconds() < 10) ? "0" + date.getSeconds() : date.getSeconds()
+   let timeFormat = new Intl.DateTimeFormat("ru",{
+       hour:"numeric",
+       minute:"numeric",
+       second:"numeric"
+   });
 
-    const stringTime = (hours + ":" + minutes + ":" + seconds)
-    const stringDate = (new Date().toLocaleDateString())
+    let dayFormat = new Intl.DateTimeFormat("en",{weekday:"long"});
+    let dataFormat = new Intl.DateTimeFormat("ru");
+    let monthFormat = new Intl.DateTimeFormat("en",{month:"long"});
+
+    const stringTime = `${timeFormat.format(date)}`|| <br/>
+    const stringDate = `${dataFormat.format(date)}` || <br/>
+
+    const stringDay = `${dayFormat.format(date)}` || <br/>
+    const stringMonth= `${monthFormat.format(date)}` || <br/>
 
 
-    let dayFormat = new Intl.DateTimeFormat("en", {
-        weekday: "long"
-    });
-    let monthFormat = new Intl.DateTimeFormat("en", {
-        month: "long",
-    });
-
-
-    //const stringDay =  formatterWeekday.format(date)|| <br/> // пишут студенты
-    //const stringMonth = formatterMonth.format(date) || <br/> // пишут студенты
-    const stringDay = `${dayFormat.format(date)}`|| <br/>
-    const stringMonth =`${monthFormat.format(date)}`|| <br/>
 
     return (
         <div className={s.clock}>
