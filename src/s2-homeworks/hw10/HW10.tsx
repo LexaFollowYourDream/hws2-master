@@ -20,6 +20,7 @@ const HW10 = () => {
 
     const dispatch = useDispatch()
     const isLoading = useSelector<AppStoreType, boolean>(state => state.loading.isLoading)
+
     const setLoading = () => { // пишет студент // показать крутилку на 1,5 секунд
         // dispatch
         dispatch(loadingAC(true))
@@ -37,6 +38,7 @@ const HW10 = () => {
                 {isLoading ? (
                     <div id={'hw10-loading'}>
                         <Loader/>
+
                     </div>
                 ) : (
                     <SuperButton
